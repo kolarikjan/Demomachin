@@ -1,0 +1,76 @@
+.about2 {
+    &-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem 0;
+        @media (max-width: $xl) {
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: $md) {
+            gap: 3rem 0;
+        }
+    }
+    &-image {
+        img {
+            border-radius: var(--border-radius);
+            padding-right: 6.5rem;
+            max-height: 575px;
+            @media (max-width: $xxl) {
+                padding-right: 5rem;
+            }
+            @media (max-width: $xl) {
+                padding-right: 0;
+            }
+            @media (max-width: $md) {
+                margin: 0 auto;
+            }
+        }
+    }
+    &-counters {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 2.5rem;
+        gap: 2rem 0;
+        @media (max-width: $xl) {
+            max-width: 80%;
+        }
+        @media (max-width: $lg) {
+            max-width: 100%;
+        }
+        @media (max-width: $md) {
+            grid-template-columns: 1fr;
+        }
+        &-item {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            &:not(:first-child) {
+                padding-left: 1.25rem;
+            }
+            &:not(:last-child) {
+                border-right: 1px solid var(--border-color);
+                padding-right: 1.25rem;
+                @media (max-width: $md) {
+                    border-right: 0;
+                }
+            }
+            @media (max-width: $md) {
+                padding: 0 !important;
+            }
+            &-number {
+                font-family: var(--font2), sans-serif;
+                font-size: 36px;
+                line-height: 33px;
+                color: var(--primary-color);
+                font-weight: 700;
+                margin-bottom: .5rem;
+            }
+            &-text {
+                font-size: 16px;
+                line-height: 22px;
+                color: var(--primary-color);
+                font-weight: 600;
+            }
+        }
+    }
+}

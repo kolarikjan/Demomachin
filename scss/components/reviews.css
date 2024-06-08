@@ -1,0 +1,16 @@
+.reviews2 {
+  overflow: hidden;
+  margin: -4rem 0;
+}
+.reviews2-inner {
+  background-color: var(--services-boxes-color);
+  padding: 4rem;
+  margin: 0 -4rem;
+  border-radius: 20px;
+}
+.reviews2-item {
+  filter: drop-shadow(7.314px 6.82px 5px rgba(219, 240, 231, 0.47));
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+}/*# sourceMappingURL=reviews.css.map */

@@ -1,0 +1,34 @@
+.services2-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.5rem;
+  gap: 1.25rem;
+}
+.services2-item {
+  position: relative;
+}
+.services2-item img {
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.services2-item-content {
+  position: absolute;
+  bottom: 3.25rem;
+  left: 2rem;
+  max-width: 60%;
+}
+.services2-item-content h3 {
+  color: var(--secondary-color);
+  font-family: var(--font2);
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.services2-item-arrow {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+}/*# sourceMappingURL=services.css.map */

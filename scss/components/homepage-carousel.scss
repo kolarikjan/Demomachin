@@ -1,0 +1,227 @@
+.homepage-carousel {
+    position: relative;
+    background-color: #fff;
+
+    .owl-stage {
+        display: flex;
+    }
+
+    .item {
+        position: relative;
+        height: 100%;
+        max-height: 500px;
+
+        @include media("lg") {
+            height: 400px;
+        }
+
+        @include media("sm") {
+            height: 350px;
+        }
+
+        @media screen and (max-width: 400px) {
+            height: 300px;
+        }
+
+        .slider-item-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider-item {
+            padding: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include media("xl") {
+                padding: 35px;
+            }
+
+            @include media("lg") {
+                justify-content: center;
+            }
+
+            @include media("sm") {
+                padding: 25px;
+            }
+
+            @media screen and (max-width: 400px) {
+                padding: 17px
+            }
+
+            .slider-item-box {
+                display: flex;
+
+                .slider-item-text {
+                    width: 430px;
+    
+                    h1 {
+                        // font-size: 67px;
+                        // line-height:  67px;
+                        padding-bottom: 10px;
+                        font-weight: 400;
+                        display: inline-block;
+                        padding: 10px;
+
+                        @include media("lg") {
+                            font-size: 35px;
+                            line-height: 35px;
+
+                        }
+
+                        @include media("sm") {
+                            font-size: 24px;
+                            line-height: 24px;
+                        }
+                    }
+    
+                    p {
+                        font-size: 19px;
+                        margin-bottom: 0;
+                        font-weight: 500;
+                        padding: 0 10px;
+                        display: inline-block;
+
+                        @include media("lg") {
+                            font-size: 18px;
+                        }
+
+                        @include media("md") {
+                            font-size: 16px;
+                        }
+
+                        @include media("sm") {
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3; 
+                                    line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+
+                        @media screen and (max-width: 400px) {
+                            font-size: 14px;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2; 
+                                    line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+    
+                    h1, h2, p {
+                        color: #fff;
+                        font-family: "Poppins", sans-serif;
+                        text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+                    }
+    
+                    .subtitle {
+                        display: block;
+                        margin-bottom: 10px;
+
+                        @include media("sm") {
+                            margin-bottom: 5px;
+                        }
+
+                        p {
+                            font-size: 146px;
+                            line-height: 146px;
+                            color: #fff;
+                            font-weight: 600;
+                            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+                            display: inline-block;
+                            padding: 10px;
+
+                            @include media("xxl") {
+                                font-size: 100px;
+                                line-height: 100px;
+                            }
+                    
+                            @include media("lg") {
+                                font-size: 50px;
+                                line-height: 50px;
+                            }
+
+                            @include media("sm") {
+                                font-size: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .text-center-width {
+                    width: 70%;
+
+                    @include media("lg") {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .carousel-btn {
+                margin-top: 30px;
+                display: flex;
+                padding: 0 10px;
+
+                @include media("md") {
+                    margin-top: 10px;
+                }
+                
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 15px 25px;
+                    color: #fff;
+                    font-size: 18px;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 600;
+                    padding-right: 65px;
+                    transition: all ease-in 0.1s;
+                    position: relative;
+
+                    @include media("sm") {
+                        background-size: 20px;
+                        background-position: right 10px center;
+                        padding: 6px 10px;
+                        padding-right: 50px;
+                        font-size: 14px;
+                    }
+
+                    svg {
+                        position: absolute;
+                        right: 25px;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                        width: 30px;
+                        
+                        @include media("sm") {
+                            width: 25px;
+                            right: 15px;
+                        }
+                    }
+                }
+            }
+
+            .btn-color-green {
+                a {
+                    background-color: #93bb07;
+                    border: 2px solid #93bb07;
+                }
+            }
+
+            .btn-color-red {
+                a {
+                    background-color: #ec383e;
+                    border: 2px solid #ec383e;
+                }
+            }
+        }
+    }
+}

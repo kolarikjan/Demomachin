@@ -1,0 +1,93 @@
+.services2 {
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem 0;
+        @media (max-width: $xxl) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &-text {
+        
+    }
+    &-boxes {
+        padding: 0 1.25rem 0 5rem;
+        @media (max-width: $xxl) {
+            padding: 0 1.25rem 0 0;
+        }
+        @media (max-width: $lg) {
+            padding: 0;
+        }
+        @media (max-width: $md) {
+            padding: 0 4rem;
+        }
+        @media (max-width: $sm) {
+            padding: 0;
+        }
+        &-row {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.25rem;
+            @media (max-width: $lg) {
+                justify-content: center;
+            }
+        }
+    }
+    &-item {
+        flex: 0 0 calc((100% - 2.5rem) / 3);
+        @media (max-width: $lg) {
+            flex: 0 0 calc((100% - 1.25rem) / 2);
+        }
+        @media (max-width: $md) {
+            flex: 0 0 100%;
+        }
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1.5;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            transition: .3s all;
+        }
+        &-content {
+            position: absolute;
+            bottom: 3.25rem;
+            left: 2rem;
+            max-width: 50%;
+            @media (max-width: $xxl) {
+                max-width: 60%;
+            }
+            h3 {
+                color: var(--secondary-color);
+                font-family: var(--font2);
+                font-size: 26px;
+                line-height: 32px;
+                font-weight: bold;
+            }
+        }
+        &-arrow {
+            position: absolute;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            width: 52px;
+            aspect-ratio: 1/1;
+            @include flexCenter();
+            background-color: var(--highlight-color);
+            border-radius: 50%;
+            transition: .3s all;
+            svg {
+                fill: var(--secondary-color);
+            }
+        }
+        &:hover &-arrow {
+            transform: scale(2.5);
+        }
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+}
