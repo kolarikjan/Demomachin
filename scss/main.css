@@ -310,7 +310,7 @@ input, textarea {
   transform-origin: 0 50%;
 }
 @media (min-width: 991px) {
-  .header #nav .nav-item:hover .nav-link::before {
+  .header #nav .nav-item:hover .nav-link::before, .header #nav .nav-item.active .nav-link::before {
     transform: scale3d(1, 1, 1);
   }
 }
@@ -446,7 +446,7 @@ input, textarea {
 }
 @media (max-width: 768px) {
   .header-banner-text {
-    bottom: 7.5svh;
+    bottom: 5svh;
     left: 0.5rem;
     right: 0.5rem;
     width: calc(100% - 1rem);
@@ -477,13 +477,13 @@ input, textarea {
   color: var(--secondary-color);
   font-size: 58px;
   letter-spacing: -1px;
-  line-height: 72px;
+  line-height: 66px;
   font-weight: 600;
 }
 @media (max-width: 768px) {
   .header-banner-text-inner h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 44px;
+    line-height: 54px;
   }
 }
 .header-banner-text-inner h1:not(:last-child) {
@@ -496,6 +496,15 @@ input, textarea {
   font-weight: 400;
   padding-right: 10rem;
 }
+.header-banner-text-inner p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .header-banner-text-inner p {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
 @media (max-width: 1475px) {
   .header-banner-text-inner p {
     padding-right: 5rem;
@@ -505,9 +514,9 @@ input, textarea {
   .header-banner-text-inner p {
     padding-right: 0;
   }
-}
-.header-banner-text-inner p:not(:last-child) {
-  margin-bottom: 2rem;
+  .header-banner-text-inner p:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
 }
 .header .navbar-toggler {
   padding-right: 0;
@@ -872,15 +881,15 @@ input, textarea {
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 1800px) {
+  .services2-text {
+    min-width: 400px;
+  }
+}
 .services2-boxes {
   padding: 0 1.25rem 0 5rem;
 }
 @media (max-width: 1475px) {
-  .services2-boxes {
-    padding: 0 1.25rem 0 0;
-  }
-}
-@media (max-width: 991px) {
   .services2-boxes {
     padding: 0;
   }
@@ -902,6 +911,11 @@ input, textarea {
   justify-content: flex-start;
   gap: 1.25rem;
 }
+@media (min-width: 1800px) {
+  .services2-boxes-row {
+    max-width: 1169px;
+  }
+}
 @media (max-width: 991px) {
   .services2-boxes-row {
     justify-content: center;
@@ -912,6 +926,8 @@ input, textarea {
   position: relative;
   overflow: hidden;
   border-radius: var(--border-radius);
+  max-height: 480px;
+  aspect-ratio: 1/1.5;
 }
 @media (max-width: 991px) {
   .services2-item {
@@ -936,6 +952,11 @@ input, textarea {
   bottom: 3.25rem;
   left: 2rem;
   max-width: 50%;
+}
+@media (max-width: 1800px) {
+  .services2-item-content {
+    max-width: 57.5%;
+  }
 }
 @media (max-width: 1475px) {
   .services2-item-content {
@@ -1015,11 +1036,11 @@ input, textarea {
   margin-right: auto !important;
 }
 .section-title h3, .section-title h2 {
-  font-size: 40px;
-  letter-spacing: -0.025rem;
-  margin-top: 2.5rem;
+  font-size: 48px;
+  letter-spacing: -1px;
+  margin-top: 2.75rem;
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
 }
 @media (max-width: 768px) {
@@ -1029,7 +1050,7 @@ input, textarea {
   }
 }
 .section-footer {
-  margin-top: 3.25rem;
+  margin-top: 2.75rem;
 }
 @media (max-width: 991px) {
   .section-footer {
@@ -1909,6 +1930,9 @@ input, textarea {
   overflow: hidden;
   padding: 0 2rem;
 }
+.reviews2 .section-header {
+  padding: 0 1.5rem;
+}
 @media (max-width: 768px) {
   .reviews2 {
     padding: 0;
@@ -1916,7 +1940,7 @@ input, textarea {
 }
 .reviews2-inner {
   background-color: var(--services-boxes-color);
-  padding: 4rem 2rem 7rem;
+  padding: 4rem 0 7rem;
   margin: 0 -4rem;
   border-radius: 20px;
 }
@@ -1927,7 +1951,7 @@ input, textarea {
 }
 @media (max-width: 768px) {
   .reviews2-inner {
-    padding: 3rem 1rem 5.5rem;
+    padding: 3rem 0 5.5rem;
   }
 }
 .reviews2-item {
@@ -1941,8 +1965,8 @@ input, textarea {
   line-height: 24px;
 }
 .reviews2-item-author p {
-  color: var(--primary-color);
-  font-weight: 700;
+  color: var(--primary-color) !important;
+  font-weight: 700 !important;
   margin-bottom: 0.1rem;
 }
 .reviews2-item-author span {
@@ -1960,7 +1984,7 @@ input, textarea {
 }
 @media (max-width: 768px) {
   .reviews2-slider {
-    padding: 0;
+    padding: 0 1rem;
   }
 }
 .reviews2-slider .owl-dots {
@@ -2141,7 +2165,7 @@ input, textarea {
   padding: 1.5rem 1.5rem 0;
 }
 .news2-item-title {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 30px;
   color: var(--primary-color);
   font-weight: 700;
@@ -2290,6 +2314,10 @@ input, textarea {
   background-color: var(--footer-secondary-color);
   border-radius: 7px;
   color: var(--paragraph-color);
+  transition: 0.3s all;
+}
+.footer-top-form-line input:focus, .footer-top-form-line textarea:focus {
+  box-shadow: 0 0 1px 1px var(--paragraph-color);
 }
 .footer-top-form-line input {
   height: 55px;
@@ -2510,11 +2538,11 @@ input, textarea {
   margin-bottom: 0 !important;
 }
 .section-subpage h1 {
-  font-size: 47px;
-  letter-spacing: -0.025rem;
+  font-size: 56px;
+  letter-spacing: -1px;
   margin-top: 3rem;
   margin-bottom: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   text-transform: initial;
 }
@@ -2524,11 +2552,11 @@ input, textarea {
   }
 }
 .section-subpage h2 {
-  font-size: 42px;
-  letter-spacing: -0.025rem;
+  font-size: 48px;
+  letter-spacing: -1px;
   margin-top: 2.75rem;
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   text-transform: initial;
 }
@@ -2538,11 +2566,11 @@ input, textarea {
   }
 }
 .section-subpage h3 {
-  font-size: 37px;
-  letter-spacing: -0.025rem;
+  font-size: 38px;
+  letter-spacing: -1px;
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   text-transform: initial;
 }
@@ -2553,10 +2581,10 @@ input, textarea {
 }
 .section-subpage h4 {
   font-size: 31px;
-  letter-spacing: -0.025rem;
+  letter-spacing: -1px;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   text-transform: initial;
 }
@@ -2567,10 +2595,10 @@ input, textarea {
 }
 .section-subpage h5 {
   font-size: 26px;
-  letter-spacing: -0.025rem;
+  letter-spacing: -1px;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   text-transform: initial;
 }
@@ -2580,15 +2608,25 @@ input, textarea {
   }
 }
 .section-subpage p, .section-subpage li, .section-subpage td {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 30px;
+  font-weight: 400;
   color: var(--paragraph-color);
 }
-.section-subpage-heading h3, .section-subpage-heading h2 {
+.section-subpage-heading h3:last-child, .section-subpage-heading h2:last-child {
+  margin-bottom: 2.25rem !important;
+  padding-bottom: 0 !important;
+}
+@media (max-width: 768px) {
+  .section-subpage-heading h3:last-child, .section-subpage-heading h2:last-child {
+    margin-bottom: 1.75rem !important;
+  }
+}
+.section-subpage-heading p:last-child {
   margin-bottom: 2.25rem !important;
 }
 @media (max-width: 768px) {
-  .section-subpage-heading h3, .section-subpage-heading h2 {
+  .section-subpage-heading p:last-child {
     margin-bottom: 1.75rem !important;
   }
 }
@@ -3008,7 +3046,7 @@ input, textarea {
 @media (min-width: 1475px) {
   .container {
     max-width: 1450px;
-    padding-lesft: 15px;
+    padding-left: 15px;
     padding-right: 15px;
   }
   .container-extended {
@@ -3017,10 +3055,10 @@ input, textarea {
     margin: 0;
   }
   .container-left {
-    margin-left: 0;
+    padding-left: 15px;
   }
   .container-split-right {
-    margin-right: 0;
+    padding-right: 15px;
   }
 }
 .dropdown-hover:hover .dropdown-hover-menu {

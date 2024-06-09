@@ -1,19 +1,22 @@
 .reviews2 {
     overflow: hidden;
     padding: 0 2rem;
+    .section-header {
+        padding: 0 1.5rem;
+    }
     @media (max-width: $md) {
         padding: 0;
     }
     &-inner {
         background-color: var(--services-boxes-color);
-        padding: 4rem 2rem 7rem;
+        padding: 4rem 0 7rem;
         margin: 0 -4rem;
         border-radius: 20px;
         @media (max-width: $xxxl) {
             margin: 0;
         }
         @media (max-width: $md) {
-            padding: 3rem 1rem 5.5rem;
+            padding: 3rem 0 5.5rem;
         }
     }
     &-item {
@@ -27,8 +30,8 @@
                 line-height: 24px;
             }
             p {
-                color: var(--primary-color);
-                font-weight: 700;
+                color: var(--primary-color) !important;
+                font-weight: 700 !important;
                 margin-bottom: .1rem;
             }
             span {
@@ -44,7 +47,7 @@
             padding: 0 2.75rem;
         }
         @media (max-width: $md) {
-            padding: 0;
+            padding: 0 1rem;
         }
         .owl-dots {
             position: absolute;

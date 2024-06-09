@@ -6,11 +6,11 @@
         margin-bottom: 0 !important;
     }
     h1 {
-        font-size: 47px;
-        letter-spacing: -0.025rem;
+        font-size: 56px;
+        letter-spacing: -1px;
         margin-top: 3rem;
         margin-bottom: 1.75rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--primary-color);
         text-transform: initial;
         @include media("md") {
@@ -18,11 +18,11 @@
         }
     }
     h2 {
-        font-size: 42px;
-        letter-spacing: -0.025rem;
+        font-size: 48px;
+        letter-spacing: -1px;
         margin-top: 2.75rem;
         margin-bottom: 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--primary-color);
         text-transform: initial;
         @include media("md") {
@@ -30,11 +30,11 @@
         }
     }
     h3 {
-        font-size: 37px;
-        letter-spacing: -0.025rem;
+        font-size: 38px;
+        letter-spacing: -1px;
         margin-top: 2.5rem;
         margin-bottom: 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--primary-color);
         text-transform: initial;
         @include media("md") {
@@ -43,10 +43,10 @@
     }
     h4 {
         font-size: 31px;
-        letter-spacing: -0.025rem;
+        letter-spacing: -1px;
         margin-top: 2.5rem;
         margin-bottom: 1.25rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--primary-color);
         text-transform: initial;
         @include media("md") {
@@ -55,10 +55,10 @@
     }
     h5 {
         font-size: 26px;
-        letter-spacing: -0.025rem;
+        letter-spacing: -1px;
         margin-top: 2rem;
         margin-bottom: 1.25rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--primary-color);
         text-transform: initial;
         @include media("md") {
@@ -66,16 +66,26 @@
         }
     }
     p, li, td {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 30px;
+        font-weight: 400;
         color: var(--paragraph-color);
     }
     &-heading {
         h3, h2 {
+            &:last-child {
+                margin-bottom: 2.25rem !important;
+                padding-bottom: 0 !important;
+                @include media("md") {
+                    margin-bottom: 1.75rem !important;
+                }    
+            }
+        }
+        p:last-child {
             margin-bottom: 2.25rem !important;
             @include media("md") {
                 margin-bottom: 1.75rem !important;
-            }
+            }    
         }
     }
     ul {

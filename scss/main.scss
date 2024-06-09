@@ -33,7 +33,7 @@
 @media (min-width: $xxl) {
     .container {
         max-width: 1450px;
-        padding-lesft: 15px;
+        padding-left: 15px;
         padding-right: 15px;
     }
     .container-extended {
@@ -42,10 +42,10 @@
         margin: 0;
     }
     .container-left {
-        margin-left: 0;
+        padding-left: 15px;
     }
     .container-split-right {
-        margin-right: 0;
+        padding-right: 15px;
     }
 }
 .dropdown-hover:hover .dropdown-hover-menu {
