@@ -59,9 +59,9 @@
     &.no-border {
         border-color: transparent;
         &:hover {
-            color: var(--primary-color);
+            color: var(--button-color);
             svg, path {
-                fill: var(--primary-color) !important;
+                fill: var(--button-color) !important;
             }
         }
     }

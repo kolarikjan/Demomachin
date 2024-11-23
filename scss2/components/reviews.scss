@@ -1,0 +1,106 @@
+.reviews2 {
+    overflow: hidden;
+    padding: 0 2rem;
+    .section-header {
+        padding: 0 1.5rem;
+    }
+    @media (max-width: $md) {
+        padding: 0;
+    }
+    &-inner {
+        background-color: var(--services-boxes-color);
+        padding: 4rem 0 7rem;
+        margin: 0 -4rem;
+        border-radius: 20px;
+        @media (max-width: $xxxl) {
+            margin: 0;
+        }
+        @media (max-width: $md) {
+            padding: 3rem 0 5.5rem;
+        }
+    }
+    &-item {
+        filter: drop-shadow(7.314px 6.82px 5px rgba(219,240,231,0.47));
+        border-radius: var(--border-radius);
+        background-color: var(--secondary-color);
+        padding: 2.5rem;
+        &-author {
+            p, span {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            p {
+                color: var(--primary-color) !important;
+                font-weight: 700 !important;
+                margin-bottom: .1rem;
+            }
+            span {
+                color: var(--paragraph-color);
+                font-weight: 400;
+                opacity: .75;
+            }
+        }
+    }
+    &-slider {
+        padding: 0 4rem;
+        @media (max-width: $xl) {
+            padding: 0 2.75rem;
+        }
+        @media (max-width: $md) {
+            padding: 0 1rem;
+        }
+        .owl-dots {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            bottom: -2.5rem;
+            left: 0;
+            width: 100%;
+            .owl-dot {
+                width: 12px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                span {
+                    margin: 0 !important;
+                    background-color: var(--highlight-color) !important;
+                    opacity: .33;
+                }
+                &.active span, &:hover span {
+                    background-color: var(--highlight-color) !important;
+                    opacity: 1;
+                }
+            }
+        }
+        .owl-nav {
+            @media (max-width: $sm) {
+                display: none;
+            }
+            .owl-prev, .owl-next {
+                background-color: var(--highlight-color) !important;
+                margin: 0 !important;
+                border-radius: 50%;
+                width: 52px;
+                border: 1px solid var(--highlight-color);
+                aspect-ratio: 1/1;
+                @include flexCenter();
+                position: absolute;
+                top: 50%;
+                svg {
+                    fill: var(--secondary-color);
+                }
+            }
+            .owl-prev {
+                left: 0;
+                transform: translate(-50%,-50%);
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+            .owl-next {
+                right: 0;
+                transform: translate(50%,-50%);
+            }
+        }
+    }
+}

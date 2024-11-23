@@ -13,9 +13,8 @@
     &-image {
         img {
             border-radius: var(--border-radius);
-            margin-right: 6.5rem;
-            border-radius: $radius;
-            max-height: 600px;
+            padding-right: 6.5rem;
+            max-height: 575px;
             @media (max-width: $xxl) {
                 padding-right: 5rem;
             }
@@ -32,33 +31,14 @@
         grid-template-columns: repeat(3, 1fr);
         margin-top: 2.5rem;
         gap: 2rem 0;
-        &.counter-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        &.counter-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        &.counter-1 {
-            grid-template-columns: 1fr;
-            width: fit-content;
-        }
         @media (max-width: $xl) {
             max-width: 80%;
-            &.counter-4 {
-                max-width: 100%;
-            }
-            &.counter-2 {
-                max-width: 60%;
-            }
         }
         @media (max-width: $lg) {
-            max-width: 100% !important;
+            max-width: 100%;
         }
         @media (max-width: $md) {
-            grid-template-columns: 1fr !important;
-            &.counter-1 {
-                margin: 2.5rem auto 0;
-            }
+            grid-template-columns: 1fr;
         }
         &-item {
             text-align: center;

@@ -1,0 +1,115 @@
+.subpage {
+    padding: 7rem 0;
+    font-size: 14px;
+    @include media("md") {
+        padding: 3rem 0;
+    }
+    a {
+        color: $highlight-color;
+    }
+    p {
+        font-size: 14px;
+        color: $tertiary-color;
+        line-height: 32px;
+        margin-bottom: 1rem;
+    }
+    b, strong {
+        color: $primary-color;
+    }
+    .container > *:first-child {
+        margin-top: 0 !important;
+    }
+    &__section {
+        padding-bottom: 2rem;
+        p {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        img {
+            max-height: 400px;
+            display: block;
+            margin-left: auto;
+            @include media("md") {
+                margin: 3rem 0 0 0;
+            }
+        }
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 600;
+        margin: 4rem 0 3rem;
+        letter-spacing: -0.3px;
+        @include media("md") {
+            margin: 3rem 0 2rem;
+        }
+    }
+    h3 {
+        font-size: 26px;
+        line-height: 40px;
+        font-weight: 600;
+        margin: 4rem 0 3rem;
+        letter-spacing: -0.3px;
+        @include media("md") {
+            margin: 3rem 0 2rem;
+        }
+    }
+    h4 {
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 600;
+        margin: 3rem 0 2rem;
+        letter-spacing: -0.3px;
+    }
+    .table-responsive {
+        margin-bottom: 4rem;
+    }
+    table {
+        margin-top: 1.5rem;
+        width: 100%;
+        border: 1px solid $border-color-lightgrey;
+        font-size: 14px;
+        thead th {
+            background-color: $background-color-grey;
+            padding: 1.125rem 2rem;
+            color: $primary-color;
+            border-bottom: 1px solid $border-color-lightgrey;
+        }
+        tbody tr {
+            &:not(:last-of-type) {
+                border-bottom: 1px solid $border-color-lightgrey;
+            }
+            td {
+                padding: 1.125rem 2rem;
+                color: $tertiary-color;
+                min-width: 150px;
+                white-space: nowrap;
+            }
+        }
+    }
+    ul, ol {
+        margin-bottom: 1rem;
+        li {
+            font-size: 14px;
+            color: $tertiary-color;
+            line-height: 32px;
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            background-image: url("../img/icon-tick.png");
+            background-position: top 6px left;
+            background-repeat: no-repeat;
+            padding-left: 2rem;
+        }
+    }
+    ol {
+        margin-left: 1rem;
+        li::marker {
+            font-weight: bold;
+            color: $primary-color;
+        }
+    }
+    
+}

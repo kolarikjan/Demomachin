@@ -1,0 +1,174 @@
+.banner {
+    background-image: var(--banner-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-bottom: 7rem;
+    @include media("xxl") {
+        height: 550px;
+        margin-bottom: 6rem;
+    }
+    @include media("xl") {
+        height: auto;
+        margin-bottom: 0;
+    }
+    &-text {
+        @include flexCenter();
+        padding-top: 8.5rem;
+        padding-bottom: 4rem;
+        @include media("xxl") {
+            padding-top: 6.5rem;
+        }
+        @include media("lg") {
+            padding-top: 2.5rem;
+            padding-bottom: 3.5rem;
+        }
+        @include media("md") {
+            text-align: center;
+        }
+        h1 {
+            color: var(--secondary-color);
+            font-size: 60px;
+            line-height: 65px;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.025rem;
+            max-width: 80%;
+            @include media("xxl") {
+                max-width: 100%;
+            }
+            @include media("xl") {
+                font-size: 50px;
+                line-height: 55px;
+            }
+            @include media("sm") {
+                font-size: 45px;
+                line-height: 50px;
+            }
+        }
+        p {
+            font-size: 21px;
+            line-height: 30px;
+            color: var(--secondary-color);
+            margin-bottom: 2.5rem;
+            max-width: 70%;
+            @include media("xxl") {
+                max-width: 100%;
+            }
+            @include media("xl") {
+                font-size: 19px;
+                line-height: 28px;
+            }
+            @include media("sm") {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    &-images {
+        margin-top: 4rem;
+        @include media("xl") {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        @include media("lg") {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &-item {
+            height: 650px;
+            object-fit: cover;
+            margin-top: -1px;
+            border-radius:  15px 0 0 15px;
+            @include media("xxl") {
+                height: 575px;
+            }
+            @include media("xl") {
+                height: 500px;
+            }
+            @include media("lg") {
+                height: 350px;
+                border-radius: 0 0 15px 15px;
+            }
+        }
+    }
+    &-homepage {
+        position: relative;
+        .owl-dots {
+            margin: 0;
+            position: absolute;
+            bottom: 60px;
+            z-index: 999;
+            left: -12%;
+            transform: translateX(-50%);
+            @include media("xxl") {
+                bottom: 40px;
+            }
+            @include media("xl") {
+                display: none;
+            }
+            button {
+                span {
+                    background-color: var(--section-preTitle-background-color) !important;
+                    margin: 5px 5px !important;
+                }  
+                &.active span {
+                    background-color: var(--highlight-color) !important;
+                }
+            }
+        }
+        .owl-nav {
+            margin: 0;
+            position: absolute;
+            bottom: 180px;
+            z-index: 999;
+            left: -12%;
+            transform: translateX(-50%);
+            @include media("xxl") {
+                bottom: 140px;
+            }
+            @include media("xl") {
+                bottom: 20px;
+                left: -14%;
+            }
+            @include media("lg") {
+                bottom: 25px;
+                left: 50%;
+            }
+            button {
+                margin: 0 !important; 
+            }
+            .owl-prev {
+                margin-right: .5rem !important;
+            }
+            .owl-prev img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.banner-subpage {
+    background-image: var(--header-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7rem 0 4rem;
+    h1 {
+        color: var(--secondary-color);
+        font-size: 60px;
+        margin-bottom: 2rem;
+        @include media("lg") {
+            margin-bottom: 0rem;
+        }
+        @include media("sm") {
+            font-size: 45px;
+            line-height: 50px;
+        }
+    }
+    @include media("lg") {
+        padding: 5rem 0;
+    }
+    @include media("sm") {
+        padding: 3rem 0;
+    }
+    @include media("md") {
+        text-align: center;
+    }
+}

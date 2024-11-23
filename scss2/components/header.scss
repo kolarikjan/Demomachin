@@ -1,10 +1,8 @@
 .header {
-    position: relative;
     &-message {
         position: relative;
         border-bottom: 1px solid var(--border-color);
         padding: 1rem 5rem 1rem 2rem;
-        border-radius: 0 0 $radius $radius;
         @include media("lg") {
             padding: 1rem 2rem 1rem 2rem;
             
@@ -17,11 +15,9 @@
             background-position: left center;
             padding-left: 2.25rem;
             p {
-                font-size: 16px;
-                line-height: 30px;
-                font-weight: 400;
+                margin-bottom: 0;
+                font-size: 17px;
                 color: var(--paragraph-color);
-                margin: 0
             }
             @include media("lg") {
                 @include flexCenterDir(column);
@@ -76,12 +72,10 @@
         .navbar-nav {
             margin: 0 auto;
             flex-wrap: wrap;
-            justify-content: center;
             @include media("xl") {
                 margin: 0 auto;
             }
             @include media("lg") {
-                justify-content: flex-start;
                 & > .nav-item {
                     border-top: 1px solid var(--border-color);
                 }
@@ -116,12 +110,10 @@
                         border-top: 1px solid var(--border-color);
                     }
                     & > div {
-                        padding: 1rem 1.75rem 1rem;
+                        padding: 2rem 1.75rem 1rem;
                         background-color: var(--background-color);
                         border-radius: var(--border-radius);
-                        box-shadow: 0px 5px 12px 0px #0000001f;
                         @include media("lg") {
-                            box-shadow: none;
                             padding: 0 1rem;
                             border: 0;
                             svg {
@@ -255,7 +247,6 @@
         }  
     } 
     &-main {
-        filter: drop-shadow(0 0 14.5px rgba(0,0,0,0.1));
         position: absolute;
         top: 0;
         left: 0;
@@ -279,51 +270,6 @@
             }
         }
     }
-    
-    &-breadcrumb {
-        padding-top: 6rem;
-        background-color: #fff;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-bottom: 1px solid var(--border-color);
-        &-text {
-            padding: 6rem 0;
-            text-align: center;
-            @media (max-width: $md) {
-                padding: 4rem 0;
-            }
-            h1 {
-                margin: 0 !important;
-            }
-        }
-        &-ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0;
-            margin: 1rem 0 0;
-            @media (max-width: $md) {
-                display: none;
-            }
-            li {
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                a {
-                    color: var(--primary-color);
-                    text-transform: initial;
-                    font-size: 15px;
-                    line-height: 30px;
-                    font-weight: 400;
-                }
-                svg {
-                    fill: var(--highlight-color);
-                    margin: 0 1rem;
-                }
-            }
-        }
-    }
     &-banner {
         position: relative;
         padding: 0 1.25rem 1.25rem;
@@ -332,7 +278,6 @@
             padding: 0 .5rem;
         }
         &-item {
-            position: relative;
             img {
                 height: calc(100svh - 1.25rem);
                 border-radius: 0 0 $radius $radius;
@@ -345,14 +290,10 @@
         }
         &-text {
             position: absolute;
-            bottom: 0;
+            bottom: 20svh;
             left: 0;
             right: 0;
             width: 100%;
-            & > .container {
-                @include flexCenter();
-                height: 100%;
-            }
             @media (max-width: $md) {
                 bottom: 5svh;
                 left: .5rem;
@@ -360,13 +301,55 @@
                 width: calc(100% - 1rem);
             }
             &-inner {
-                @include flexCenter();
-                height: 100%;
                 position: relative;
                 z-index: 1;
-                height: 500px;
+                max-width: 50%;
+                @media (max-width: $xxl) {
+                    max-width: 60%;
+                }
                 @media (max-width: $lg) {
-                    height: 100%;
+                    max-width: 100%;
+                }
+                @media (max-width: $md) {
+                    text-align: center;
+                    padding: 0 .5rem;
+                }
+                h1 {
+                    color: var(--secondary-color);
+                    font-size: 58px;
+                    letter-spacing: -1px;
+                    line-height: 66px;
+                    font-weight: 600;
+                    @media (max-width: $md) {
+                        font-size: 44px;
+                        line-height: 54px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;    
+                    }
+                }
+                p {
+                    color: var(--secondary-color);
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    padding-right: 10rem;
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;    
+                    }
+                    @media (max-width: $md) {
+                        font-size: 17px;
+                        line-height: 27px;
+                    }
+                    @media (max-width: $xxl) {
+                        padding-right: 5rem;
+                    }
+                    @media (max-width: $lg) {
+                        &:not(:last-child) {
+                            margin-bottom: 1.25rem;    
+                        }
+                        padding-right: 0;
+                    }
                 }
             }
         }

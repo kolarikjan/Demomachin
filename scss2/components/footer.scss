@@ -23,7 +23,6 @@
             }
             p {
                 opacity: .6;
-                margin-bottom: 0;
             }
             b, strong {
                 font-weight: 600;
@@ -59,26 +58,12 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: .75rem 1.25rem;
-                label {
-                    display: block;
-                    width: 100%;
-                    &.half {
-                        width: 46%;
-                        @media (max-width: $xl) {
-                            width: 37.5%;
-                        }
-                        @media (max-width: $md) {
-                            width: 100%;
-                        }
-                    }
-                }
                 input, textarea {
                     border: 0;
                     background-color: var(--footer-secondary-color);
                     border-radius: 7px;
                     color: var(--paragraph-color);
                     transition: .3s all;
-                    width: 100%;
                     &:focus {
                         box-shadow: 0 0 1px 1px var(--paragraph-color);
                     }
@@ -86,6 +71,13 @@
                 input {
                     height: 55px;
                     padding: .75rem 1rem;
+                    width: 46%;
+                    @media (max-width: $xl) {
+                        width: 37.5%;
+                    }
+                    @media (max-width: $md) {
+                        width: 100%;
+                    }
                 }
                 textarea {
                     padding: 1rem;
@@ -133,7 +125,6 @@
             ul {
                 list-style: none;
                 display: flex;
-                flex-wrap: wrap;
                 align-items: center;
                 gap: 1rem 2.25rem;
                 margin: 0;
@@ -167,9 +158,6 @@
                 font-weight: 500;
                 text-align: right;
                 margin-bottom: 0;
-                a {
-                    color: var(--paragraph-color);
-                }
                 span {
                     display: block;
                 }
@@ -188,89 +176,6 @@
                         display: block;
                     }
                 }
-            }
-        }
-    }
-    
-    &-icons {
-        @include min-media("md") {
-            &-right {
-                .footer-icons-box {
-                    flex-direction: row-reverse;
-                }
-                .footer-icons-content {
-                    text-align: right;
-                }
-                .footer-icons-image {
-                    margin-right: 0;
-                    margin-left: 1rem;
-                }
-            }
-        }
-        &-box {
-            display: flex;
-            margin-bottom: 2.5rem;
-            @include media("md") {
-                @include flexCenterDir(column);
-                text-align: center;
-            }
-            &:hover .footer-icons-image:not(.noborder) {
-                background-color: var(--background-color);
-                svg path {
-                    fill: var(--highlight-color);
-                }
-            }
-        }
-        &-image {
-            flex-shrink: 0;
-            margin-right: 1rem;
-            border: 1px solid var(--highlight-color);
-            background-color: var(--highlight-color);
-            border-radius: 50%;
-            width: 65px;
-            height: 65px;
-            transition: all 0.15s cubic-bezier(0, 0, 0, 0.68);
-            @include flexCenter();
-            &.noborder {
-                width: auto;
-                height: auto;
-                border: 0 !important;
-                align-items: flex-start;
-                svg {
-                    margin-top: 1.25rem;
-                    @include media("md") {
-                        margin-top: 0;
-                    }
-                }
-            }
-            @include media("md") {
-                margin-right: 0;
-            }
-            svg path {
-                fill: var(--background-color);
-            }
-        }
-        &-title {
-            color: var(--paragraph-color);
-            font-size: 13px;
-            line-height: 22px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.033rem;
-        }
-        &-content {
-            margin-top: .25rem;
-            p {
-                color: var(--primary-color);
-                font-size: 18px;
-                font-weight: 700;
-                margin-bottom: 0;
-            }
-            a { 
-                color: var(--highlight-color);
-                font-size: 18px;
-                font-weight: 700;
-                margin-bottom: 0;
             }
         }
     }
